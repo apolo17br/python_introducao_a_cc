@@ -33,4 +33,22 @@ Além disso, é evidente que os seres humanos, como espécie altamente desenvolv
 > 
 > Referência para a aplicação: [Carderno de Laboratório - Detectar bordas com o OpenCV](https://cadernodelaboratorio.com.br/detectar-bordas-com-o-opencv-4-2/)
 
-Veja o documento neste repositório chamado "[Aplicação em Python](https://github.com/apolo17br/python_introducao_a_cc/blob/main/Aplica%C3%A7%C3%A3o%20em%20Python)", para verificar mais detalhes sobre o algoritmo escolhido, bem como visualizá-lo funcionando no Google Colab.
+Veja o documento neste repositório chamado "[Aplicação em Python](https://github.com/apolo17br/python_introducao_a_cc/blob/main/Aplica%C3%A7%C3%A3o%20em%20Python)", para visualizá-lo funcionando no Google Colab.
+
+# Processamento de imagem em Python
+## Detecção de bordas com o OpenCV e algoritmo Canny
+##### Projeto no Google Colab - [clique aqui](https://colab.research.google.com/drive/18giPTkiHBGlt0DY1lOjPRA7qP0OGh37o?usp=sharing) ou acesse https://colab.research.google.com/drive/18giPTkiHBGlt0DY1lOjPRA7qP0OGh37o?usp=sharing.
+
+# Algoritmo Canny
+Antes de apresentar o código, gostaria de introduzir, brevemente, o que o código faz utilizando como base o experimento realizado pelo [Caderno de Laboratório](https://cadernodelaboratorio.com.br/detectar-bordas-com-o-opencv-4-2/), website que pegamos todas as informações necessárias para realização do presente trabalho.
+
+> O detector de borda Canny foi desenvolvido por John F. Canny em 1986. É também conhecido por muitos como o detector ideal. 
+> Este algoritmo tem como objetivo satisfazer três critérios principais: 
+> * Baixa taxa de erro: Significa uma boa detecção apenas de bordas existentes. 
+> * Boa localização: A distância entre os pixels de borda detectada e os pixels da borda real deve ser minimizada. 
+> * Resposta mínima: Apenas uma resposta do detector por borda. 
+> 
+> Embora os procedimentos necessários para execução deste algoritmo não sejam simples, para os usuários do OpenCV, a sua utilzação se  resume à:
+> `img1 = cv2.Canny(img,limiar_inferior, limiar_superior, tamanho_kernel)`
+
+Os parâmetros de entrada se resumem a `img`, `limiar_inferior` (conjuntos de pixels com gradiente de intensidade menor do que isto não será considerado como borda) e `limiar_superior` (conjuntos de pixels com gradiente de intensidade maior do que isto não será considerado como borda). O `tamanho_kernel` é o tamanho da matriz do kernel Sobel, utilizado para cálculo dos gradientes.
