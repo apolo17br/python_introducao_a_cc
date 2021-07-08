@@ -1,1 +1,18 @@
+#https://colab.research.google.com/drive/18giPTkiHBGlt0DY1lOjPRA7qP0OGh37o?usp=sharing
+import cv2
 
+from google.colab.patches import cv2_imshow
+from google.colab import drive
+drive.mount('/content/drive')
+
+limiar_inferior = 30
+limiar_superior = 90
+tamanho_kernel = 5
+
+img = cv2.imread('/content/data/Felipe_Viel.png',1)
+img1 = cv2.Canny(img,limiar_inferior, limiar_superior, tamanho_kernel)
+
+cv2_imshow(img)
+cv2_imshow(img1)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
